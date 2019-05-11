@@ -15,9 +15,12 @@ enum Shot
 };
 
 #include"Bullet.h"
+#include<List>
+
 
 class CBulletManager
 {
+	std::list<CBullet*> bulletList;
 	CBullet *bullet[BULLET_NUM];
 public:
 	CBulletManager();

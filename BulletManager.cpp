@@ -6,41 +6,53 @@
 #include"CShot.h"
 #include"VShot.h"
 
+
+
 CBulletManager::CBulletManager()
 {
 	//弾全ての初期化
-	for (int num = 0; num < BULLET_NUM; num++)
-	{
-		bullet[num] = NULL;
-	}
+	//for (int num = 0; num < BULLET_NUM; num++)
+	//{
+	//	bullet[num] = NULL;
+	//}
 }
 
 CBulletManager::~CBulletManager()
 {
+	bulletList.clear();
 	//弾全ての削除
-	for (int num = 0; num < BULLET_NUM; num++)
-	{
-		delete bullet[num];
-	}
+	//for (int num = 0; num < BULLET_NUM; num++)
+	//{
+	//	delete bullet[num];
+	//}
 }
 
 void CBulletManager::Update()
 {
-	for (int num = 0; num < BULLET_NUM; num++)
+	for (auto itr : bulletList)
 	{
-		//NULLでない場合
-		if (bullet[num] != NULL)
+		if (bulletList.empty() == false)
 		{
-			bullet[num]->Update();
-			//弾が画面外に出た場合
-			if (bullet[num]->GetFlag() == false)
-			{
-				//削除してからNULLを入れる
-				delete bullet[num];
-				bullet[num] = NULL;
-			}
+			itr->Update();
 		}
+		//bulletList.remove_if(itr.GetFlag == false);
 	}
+
+	//for (int num = 0; num < BULLET_NUM; num++)
+	//{
+	//	//NULLでない場合
+	//	if (bullet[num] != NULL)
+	//	{
+	//		bullet[num]->Update();
+	//		//弾が画面外に出た場合
+	//		if (bullet[num]->GetFlag() == false)
+	//		{
+	//			//削除してからNULLを入れる
+	//			delete bullet[num];
+	//			bullet[num] = NULL;
+	//		}
+	//	}
+	//}
 }
 
 void CBulletManager::Shot(int *tex, VECTOR &pos, SBulletStatus &status, int minNum, int maxNum)
@@ -50,27 +62,30 @@ void CBulletManager::Shot(int *tex, VECTOR &pos, SBulletStatus &status, int minN
 	SBulletStatus sStatus = status;
 	//Nullだった値をnumへ
 	int num = NullCheck(minNum, maxNum);
-	int underOnCheck=0;
+	int underOnCheck = 0;
 	//maxNumがzShotだったときはzShot
 	if (maxNum == zShot)
 	{
 		//zStatusのaStatusによって発射される球の数が変わる
 		//直線へ発射
 		underOnCheck = eStraightShot;
-		bullet[num] = new CZBullet(tex, pos, sStatus, underOnCheck);
+		bulletList.emplace_back(new CZBullet(tex, pos, sStatus, underOnCheck));
+		//bullet[num] = new CZBullet(tex, pos, sStatus, underOnCheck);
 		//aStatusが1以上なら上にも発射
 		if ((&status)->aStatus >= eOnShot)
 		{
 			underOnCheck = eOnShot;
 			num = NullCheck(minNum, maxNum);
-			bullet[num] = new CZBullet(tex, pos, sStatus, underOnCheck);
+			bulletList.emplace_back(new CZBullet(tex, pos, sStatus, underOnCheck));
+			//bullet[num] = new CZBullet(tex, pos, sStatus, underOnCheck);
 		}
 		//aStatusが2以上なら下にも発射
 		if ((&status)->aStatus >= eUnderShot)
 		{
 			underOnCheck = eUnderShot;
 			num = NullCheck(minNum, maxNum);
-			bullet[num] = new CZBullet(tex, pos, sStatus, underOnCheck);
+			bulletList.emplace_back(new CZBullet(tex, pos, sStatus, underOnCheck));
+			//bullet[num] = new CZBullet(tex, pos, sStatus, underOnCheck);
 		}
 	}
 	//maxNumがcShotだったときはcShot
@@ -79,54 +94,64 @@ void CBulletManager::Shot(int *tex, VECTOR &pos, SBulletStatus &status, int minN
 		//zStatusのaStatusによって発射される球の数が変わる
 		//直線へ発射
 		underOnCheck = eStraightShot;
-		bullet[num] = new CCBullet(tex, pos, sStatus, underOnCheck);
+		bulletList.emplace_back(new CCBullet(tex, pos, sStatus, underOnCheck));
+		//bullet[num] = new CCBullet(tex, pos, sStatus, underOnCheck);
 		//aStatusが1以上なら上にも発射
 		if ((&status)->aStatus >= eOnShot)
 		{
 			underOnCheck = eOnShot;
 			num = NullCheck(minNum, maxNum);
-			bullet[num] = new CCBullet(tex, pos, sStatus, underOnCheck);
+			bulletList.emplace_back(new CCBullet(tex, pos, sStatus, underOnCheck));
+			//bullet[num] = new CCBullet(tex, pos, sStatus, underOnCheck);
 		}
 		//aStatusが2以上なら下にも発射
 		if ((&status)->aStatus >= eUnderShot)
 		{
 			underOnCheck = eUnderShot;
 			num = NullCheck(minNum, maxNum);
-			bullet[num] = new CCBullet(tex, pos, sStatus, underOnCheck);
+			bulletList.emplace_back(new CCBullet(tex, pos, sStatus, underOnCheck));
+			//bullet[num] = new CCBullet(tex, pos, sStatus, underOnCheck);
 		}
 	}
 	//maxNumがvShotだったときはvShot
 	else if (maxNum == vShot)
 	{
-		bullet[num] = new CVBullet(tex, pos, sStatus);
+		bulletList.emplace_back(new CVBullet(tex, pos, sStatus));
+		//bullet[num] = new CVBullet(tex, pos, sStatus);
 	}
 }
 
 int CBulletManager::NullCheck(int mixNum, int maxNum)
 {
-	for (int num = mixNum; num < maxNum; num++)
-	{
-		if (bullet[num] == NULL)
-		{
-			return num;
-		}
-	}
+	//for (int num = mixNum; num < maxNum; num++)
+	//{
+	//	if (bullet[num] == NULL)
+	//	{
+	//		return num;
+	//	}
+	//}
 	//全てのbulletが更新中の場合NULLを返す
 	return NULL;
 }
 
 VECTOR CBulletManager::GetBulletPos(int num)
 {
-	return bullet[num]->GetPos();
+	//return bulletList[num];
+	//return bullet[num]->GetPos();
+	return VGet(0, 0, 0);
 }
 
 void CBulletManager::Render()
 {
-	for (int num = 0; num < BULLET_NUM; num++)
+	//for (int num = 0; num < BULLET_NUM; num++)
+	//{
+	//	if (bullet[num] != NULL)
+	//	{
+	//		bullet[num]->Render();
+	//	}
+	//}
+	for (auto itr : bulletList)
 	{
-		if (bullet[num] != NULL)
-		{
-			bullet[num]->Render();
-		}
+		itr->Render();
 	}
 }

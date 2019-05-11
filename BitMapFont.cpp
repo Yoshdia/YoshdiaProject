@@ -1,5 +1,4 @@
 #include "BitMapFont.h"
-#include"DxLib.h"
 
 const int maxImageNum = 256;
 
