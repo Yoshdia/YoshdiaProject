@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+Log.txt
+.vs/
+x64/Debug/
+Shooter.vcxproj.user
+Shooter.ilk
+Shooter.pdb
+Debug/

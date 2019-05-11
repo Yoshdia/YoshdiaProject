@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ZShot.cpp">
+      <Filter>Object\Player\Bullet\zShot</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CShot.cpp">
+      <Filter>Object\Player\Bullet\cShot</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Object\Player\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletManager.cpp">
+      <Filter>Object\Player\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="VShot.cpp">
+      <Filter>Object\Player\Bullet\vShot</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectManager.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawn.cpp">
+      <Filter>Object\Enemy\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Object\Enemy\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGroundSpawn.cpp">
+      <Filter>BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet.cpp">
+      <Filter>Object\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBulletManager.cpp">
+      <Filter>Object\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelUp.cpp">
+      <Filter>Pause</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemys.cpp">
+      <Filter>Object\Enemy\Enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Manager\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>Manager\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Clear.cpp">
+      <Filter>Manager\Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="Over.cpp">
+      <Filter>Manager\Over</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemSpawner.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause.cpp">
+      <Filter>Pause</Filter>
+    </ClCompile>
+    <ClCompile Include="BitMapFont.cpp">
+      <Filter>BitMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Select.cpp">
+      <Filter>Manager\Select</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoPlay.cpp">
+      <Filter>Manager\Title\DemoPlay</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ZShot.h">
+      <Filter>Object\Player\Bullet\zShot</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CShot.h">
+      <Filter>Object\Player\Bullet\cShot</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletManager.h">
+      <Filter>Object\Player\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Object\Player\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="VShot.h">
+      <Filter>Object\Player\Bullet\vShot</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyManager.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawn.h">
+      <Filter>Object\Enemy\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Object\Enemy\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectManager.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBulletManager.h">
+      <Filter>Object\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet.h">
+      <Filter>Object\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Pause.h">
+      <Filter>Pause</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelUp.h">
+      <Filter>Pause</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemys.h">
+      <Filter>Object\Enemy\Enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Manager\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>Manager\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Over.h">
+      <Filter>Manager\Over</Filter>
+    </ClInclude>
+    <ClInclude Include="Clear.h">
+      <Filter>Manager\Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGroundSpawn.h">
+      <Filter>BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemSpawner.h">
+      <Filter>Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BitMapFont.h">
+      <Filter>BitMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Select.h">
+      <Filter>Manager\Select</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoPlay.h">
+      <Filter>Manager\Title\DemoPlay</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{b3c83ca9-9bdf-4825-bb0d-9d93f00f75e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{2a501967-c5b5-4b4a-ab60-755dc8972e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{a613ea79-ac48-4c0c-846e-1711d30d3b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player\Bullet">
+      <UniqueIdentifier>{fe4b7177-91db-4d25-8077-201f8e7b8322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player\Bullet\cShot">
+      <UniqueIdentifier>{c4781b42-60f6-466b-84c5-28d84dad1614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player\Bullet\zShot">
+      <UniqueIdentifier>{4a7f6890-fbd7-4955-841a-c1384133b085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player\Bullet\vShot">
+      <UniqueIdentifier>{e1170e13-f3cc-4901-9282-0eaf8b378b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{8e6ba261-5d2f-4d09-925a-0fae85961ca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{6d552fbf-0c05-4239-b12e-8c7d9cae4f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Wave">
+      <UniqueIdentifier>{cb0c7f0c-20ee-4b90-af92-ed80ae666ec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Spawn">
+      <UniqueIdentifier>{e5d24b35-6a92-443f-9a8e-2eabf82e2b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Collision">
+      <UniqueIdentifier>{b7b36e6a-b8a7-40d5-af07-7d9a1c2b0b09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BackGround">
+      <UniqueIdentifier>{c46b2991-70ba-4dc5-aae3-4971c6f48d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\EnemyBullet">
+      <UniqueIdentifier>{500f6c96-a17f-4e4b-9017-7f2515f518d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pause">
+      <UniqueIdentifier>{93765a94-72f8-4bd9-88c7-01af831e537d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Enemys">
+      <UniqueIdentifier>{9b50f61d-9104-4391-aeb4-32bf6a013ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Title">
+      <UniqueIdentifier>{2b161e8c-b979-42d9-a857-a950b04e13b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Clear">
+      <UniqueIdentifier>{9c59a340-bf07-44cd-923e-d16a1f07733f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Over">
+      <UniqueIdentifier>{abf5f839-4f4c-4eb5-b83a-157d58d047b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Game">
+      <UniqueIdentifier>{2856afdd-92de-4169-80e2-824bd07ae5e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Item">
+      <UniqueIdentifier>{a4d4117e-3d93-4a41-b5e5-28e726dc7952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BitMap">
+      <UniqueIdentifier>{5ee54e41-11bd-4dcb-8930-afa37fe75a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Select">
+      <UniqueIdentifier>{be3cec66-2733-483e-b699-d0f5b13dd228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{a43eac2e-1b7f-4b3f-94ec-7888f1263627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Title\DemoPlay">
+      <UniqueIdentifier>{2fb10071-53ce-4856-9b6f-c3cf0e85fb01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
