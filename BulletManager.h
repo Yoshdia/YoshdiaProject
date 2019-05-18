@@ -17,11 +17,9 @@ enum Shot
 #include"Bullet.h"
 #include<List>
 
-
 class CBulletManager
 {
 	std::list<CBullet*> bulletList;
-	CBullet *bullet[BULLET_NUM];
 public:
 	CBulletManager();
 	~CBulletManager();
@@ -34,8 +32,8 @@ public:
 	//•`ŽÊ
 	void Render();
 	//’e‚ðCObjectŒ^‚ÉƒLƒƒƒXƒg‚µ‚Ä•Ô‚·
-	CBullet *GetBullet(int num) { return (CBullet*)bullet[num]; }
+	CBullet *GetBullet(int num);
+
+	const int GetListSize() { return (int)bulletList.size(); };
 private:
-	//bullet‚ÉminNum‚©‚çmaxNum‚ÌŠÔ‚ÉNull‚Ì‚à‚Ì‚ª‚ ‚Á‚½‚ç‚»‚Ì’l‚ð•Ô‚·
-	int NullCheck(int mixNum, int maxNum);
 };
